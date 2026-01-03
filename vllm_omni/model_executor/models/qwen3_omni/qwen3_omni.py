@@ -123,6 +123,7 @@ class Qwen3OmniMoeForConditionalGeneration(
                 architectures=["Qwen3OmniMoeThinkerForConditionalGeneration"],
             )
             self.model = self.thinker
+            logger.info(f"jcz self.thinker:{self.thinker}")
             self.talker = None
             self.code2wav = None
         elif self.model_stage == "talker":
@@ -145,6 +146,7 @@ class Qwen3OmniMoeForConditionalGeneration(
             )
             self.talker.init_multi_modal(thinker_config)
             self.model = self.talker
+            logger.info(f"jcz self.talker:{self.talker}")
             self.code2wav = None
             from transformers.generation.logits_process import (
                 LogitsProcessorList,
@@ -179,6 +181,7 @@ class Qwen3OmniMoeForConditionalGeneration(
                 architectures=["Qwen3OmniMoeCode2Wav"],
             )
             self.model = self.code2wav
+            logger.info(f"jcz self.code2wav:{self.code2wav}")
         else:
             raise ValueError(
                 f"Invalid model_stage: {self.model_stage}. Must be one of: 'thinker', 'talker', 'code2wav'"

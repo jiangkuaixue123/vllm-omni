@@ -34,7 +34,6 @@ The following table shows which models are currently supported by each accelerat
 
 ### ImageGen
 
-<<<<<<< HEAD
 | Model | Model Identifier | TeaCache | Cache-DiT | Ulysses-SP | Ring-Attention |
 |-------|-----------------|----------|-----------|-----------|----------------|
 | **Qwen-Image** | `Qwen/Qwen-Image` | ✅ | ✅ | ✅ | ✅ |
